@@ -3,49 +3,67 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Your Name</title>
+    <title>Miguel Martins</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- Header -->
+    <!-- HEADER / NAVIGATION -->
     <header class="site-header">
       <div class="nav-container">
-        <div class="site-title">
-          <a href="index.html">Miguel Martins</a>
-        </div>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="publications.html">Publications</a></li>
-          <li><a href="cv.pdf" download>CV</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+        <h1 class="site-title"><a href="index.html">Miguel Martins</a></h1>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li>
+              <a href="cv.pdf" download class="cv-link"
+                >CV <span class="pdf-icon">PDF</span></a
+              >
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
 
-    <!-- Main Content -->
+    <!-- MAIN CONTENT -->
     <main>
+      <!-- HERO SECTION -->
       <section class="hero">
-        <h1>Your Name</h1>
-        <p>Associate Professor of Philosophy</p>
+        <img src="cvmiguel.jpg" alt="Miguel Martins" class="hero-img" />
+        <h2>Miguel Martins</h2>
+        <p>Ph.D candidate in Mathematical Logic</p>
       </section>
 
-      <section>
+      <!-- ABOUT SECTION -->
+      <section id="about">
         <h2>About</h2>
         <p>
-          I am an associate professor at the Philosophy Department. My research
-          focuses on political theory, ethics, and the philosophy of technology.
+          I am a student in the Ph.D in Mathematics and Computer Science
+          (Mathematical Logic track) at the University of Barcelona, where I
+          investigate intuitionistic logics using universal algebra and duality
+          theory.
         </p>
       </section>
 
+      <!-- CONTACT SECTION -->
       <section id="contact">
         <h2>Contact</h2>
-        <p>Email: your.email@example.com</p>
-        <p>Office: Building 2, Room 204</p>
+        <p>
+          Email:
+          <a href="mailto:miguelplmartins561@gmail.com"
+            >miguelplmartins561@gmail.com</a
+          >
+        </p>
+        <p>
+          Address: Department of Philosophy, University of Barcelona, Carrer de
+          Montalegre 6, 08001 Barcelona, Spain
+        </p>
       </section>
     </main>
 
+    <!-- FOOTER -->
     <footer>
-      <p>© 2026 Your Name</p>
+      <p>© 2026 Miguel Martins</p>
     </footer>
   </body>
 </html>

@@ -2,51 +2,140 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Publications – Your Name</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Publications – Miguel Martins</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- Navigation -->
+    <!-- HEADER / NAVIGATION -->
     <header class="site-header">
       <div class="nav-container">
-        <div class="site-title">
-          <a href="index.html">Your Name</a>
-        </div>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="publications.html">Publications</a></li>
-          <li>
-            <a href="cv.pdf" target="_blank" rel="noopener" class="cv-link">
-              CV
-              <span class="pdf-icon">PDF</span>
-            </a>
-          </li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+        <h1 class="site-title"><a href="index.html">Miguel Martins</a></h1>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li>
+              <a href="cv.pdf" download class="cv-link"
+                >CV <span class="pdf-icon">PDF</span></a
+              >
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
 
+    <!-- MAIN CONTENT -->
     <main>
-      <h1 class="page-title">Publications</h1>
+      <!-- ================= PUBLICATIONS ================= -->
+      <section class="pub-section publications">
+        <h2 class="section-title">Publications</h2>
 
-      <div class="publication">
-        <h3>Title of the Article</h3>
-        <p class="pub-meta">Journal Name, 2025</p>
-        <p class="abstract">
-          Short abstract text goes here. Keep it concise and readable.
-        </p>
-      </div>
+        <div class="pub-list">
+          <article class="publication">
+            <p class="authors">Miguel Martins; Tommaso Moraschini.</p>
+            <h3 class="title">
+              "Local tabularity is decidable for bi-intermediate logics of trees
+              and of co-trees"
+            </h3>
+            <p class="journal">Annals of Pure and Applied Logic (2025)</p>
+            <p class="doi">
+              <a
+                href="https://doi.org/10.1016/j.apal.2025.103563"
+                target="_blank"
+                rel="noopener"
+                >https://doi.org/10.1016/j.apal.2025.103563</a
+              >
+            </p>
+          </article>
 
-      <div class="publication">
-        <h3>Second Publication Title</h3>
-        <p class="pub-meta">Conference Proceedings, 2024</p>
-        <p class="abstract">Description or abstract of the publication.</p>
-      </div>
+          <article class="publication">
+            <p class="authors">
+              Bezhanishvili, Nick; Martins, Miguel; Moraschini, Tommaso.
+            </p>
+            <h3 class="title">
+              "Bi-intermediate logics of trees and co-trees"
+            </h3>
+            <p class="journal">
+              Annals of Pure and Applied Logic 175(10) (2024)
+            </p>
+            <p class="doi">
+              <a
+                href="https://doi.org/10.1016/j.apal.2024.103490"
+                target="_blank"
+                rel="noopener"
+                >https://doi.org/10.1016/j.apal.2024.103490</a
+              >
+            </p>
+          </article>
+
+          <article class="publication">
+            <p class="authors">
+              Hyttinen, Tapani; Martins, Miguel; Moraschini, Tommaso;
+              Quadrellaro, Davide E.
+            </p>
+            <h3 class="title">
+              "Strictly n-finite varieties of Heyting algebras"
+            </h3>
+            <p class="journal">The Journal of Symbolic Logic (2024): 1-16</p>
+            <p class="doi">
+              <a
+                href="https://doi.org/10.1017/jsl.2024.48"
+                target="_blank"
+                rel="noopener"
+                >https://doi.org/10.1017/jsl.2024.48</a
+              >
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ================= PREPRINTS ================= -->
+      <section class="pub-section preprints">
+        <h2 class="section-title">Preprints</h2>
+
+        <div class="pub-list">
+          <article class="publication">
+            <p class="authors">Martins, Miguel.</p>
+            <h3 class="title">
+              "There are only countably many locally tabular bi-intermediate
+              logics of co-trees"
+            </h3>
+            <p class="journal">(2026)</p>
+            <p class="doi">
+              <a
+                href="https://arxiv.org/abs/2602.21960"
+                target="_blank"
+                rel="noopener"
+                >https://arxiv.org/abs/2602.21960</a
+              >
+            </p>
+          </article>
+
+          <article class="publication">
+            <p class="authors">
+              Martins, Miguel; Fornasiere, Damiano; Gougeon, Quentin.
+            </p>
+            <h3 class="title">
+              "Projective Unification in Bi-Intuitionistic Logic"
+            </h3>
+            <p class="journal">(2025) – under review</p>
+            <p class="doi">
+              <a
+                href="https://hal.science/hal-04957607"
+                target="_blank"
+                rel="noopener"
+                >https://hal.science/hal-04957607</a
+              >
+            </p>
+          </article>
+        </div>
+      </section>
     </main>
 
+    <!-- FOOTER -->
     <footer>
-      <p>© 2026 Your Name</p>
+      <p>© 2026 Miguel Martins</p>
     </footer>
   </body>
 </html>

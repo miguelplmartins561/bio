@@ -1,5 +1,13 @@
-body {
+/* ============================= */
+/* RESET & BODY */
+/* ============================= */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: "Georgia", "Garamond", "Times New Roman", serif;
   background-color: #ffffff;
   color: #222;
@@ -9,10 +17,7 @@ body {
 a {
   color: #000;
   text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+  position: relative;
 }
 
 main {
@@ -24,72 +29,155 @@ main {
 /* ============================= */
 /* HEADER / NAVIGATION */
 /* ============================= */
-
 .site-header {
   border-bottom: 1px solid #e5e5e5;
   padding: 20px 0;
+  background-color: #fafafa;
 }
 
 .nav-container {
   max-width: 1000px;
-  margin: auto;
+  margin: 0 auto;
   padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 .site-title a {
+  font-variant: small-caps;
+  letter-spacing: 1px;
   font-size: 20px;
   font-weight: bold;
-  letter-spacing: 0.5px;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
   gap: 30px;
-  margin: 0;
-  padding: 0;
 }
 
 .nav-links a {
   font-size: 15px;
   color: #444;
+  font-weight: 400;
+  position: relative;
+}
+
+/* Hover underline */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 1px;
+  background-color: #000;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
 }
 
 .nav-links a:hover {
   color: #000;
 }
-.nav-links a[href$=".pdf"] {
+
+/* Highlight CV link */
+.nav-links a[href$=".pdf"],
+.cv-link {
   font-weight: 600;
+  font-variant: small-caps;
+  letter-spacing: 0.8px;
+}
+
+.pdf-icon {
+  font-size: 10px;
+  margin-left: 6px;
+  border: 1px solid #aaa;
+  padding: 1px 4px;
+  border-radius: 3px;
+  letter-spacing: 0.5px;
+  color: #555;
 }
 
 /* ============================= */
-/* HOMEPAGE */
+/* MOBILE NAVIGATION */
 /* ============================= */
+@media (max-width: 700px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+  }
 
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+}
+
+/* ============================= */
+/* HERO SECTION */
+/* ============================= */
 .hero {
   margin-top: 60px;
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f7f7f7;
+  border-radius: 6px;
 }
 
-.hero h1 {
+/* HERO IMAGE */
+.hero-img {
+  width: 150px; /* adjust size */
+  height: 150px; /* make square */
+  border-radius: 50%; /* circular image */
+  object-fit: cover; /* crop nicely */
+  display: block;
+  margin: 0 auto 20px; /* center above name, add spacing */
+  border: 3px solid #ccc; /* optional subtle border */
+}
+
+.hero h2 {
   font-size: 32px;
+  font-variant: small-caps;
+  letter-spacing: 1.2px;
   margin-bottom: 10px;
 }
 
 .hero p {
   color: #555;
-  margin-top: 0;
+  font-size: 18px;
+}
+
+/* ============================= */
+/* SECTIONS & HEADINGS */
+/* ============================= */
+h2 {
+  font-variant: small-caps;
+  letter-spacing: 0.8px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+section {
+  margin-bottom: 50px;
 }
 
 /* ============================= */
 /* PUBLICATIONS PAGE */
 /* ============================= */
-
 .page-title {
   font-size: 28px;
+  font-variant: small-caps;
+  letter-spacing: 1.2px;
   margin-bottom: 40px;
+  text-align: center;
 }
 
 .publication {
@@ -104,6 +192,8 @@ main {
 
 .publication h3 {
   font-size: 18px;
+  font-variant: small-caps;
+  letter-spacing: 0.5px;
   margin-bottom: 5px;
   font-weight: normal;
 }
@@ -117,12 +207,12 @@ main {
 .abstract {
   font-size: 15px;
   color: #333;
+  line-height: 1.6;
 }
 
 /* ============================= */
 /* FOOTER */
 /* ============================= */
-
 footer {
   margin-top: 100px;
   padding: 40px 20px;
@@ -133,68 +223,90 @@ footer {
 }
 
 /* ============================= */
-/* SMALL CAPS ACADEMIC STYLE */
+/* PUBLICATIONS / PREPRINTS MODERN STYLE */
 /* ============================= */
-
-/* Site title in navbar */
-.site-title a {
-  font-variant: small-caps;
-  letter-spacing: 1px;
+.pub-section {
+  padding: 40px 20px;
+  border-radius: 8px;
+  margin-bottom: 50px;
 }
 
-/* Section headings */
-h2 {
+.publications {
+  background-color: #f7faff; /* subtle blue for published papers */
+  border-left: 6px solid #004080; /* blue accent */
+}
+
+.preprints {
+  background-color: #fef9f0; /* subtle warm tone for preprints */
+  border-left: 6px solid #ff8c00; /* orange accent */
+}
+
+.section-title {
+  font-size: 24px;
   font-variant: small-caps;
-  letter-spacing: 0.8px;
+  letter-spacing: 1.2px;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #004080; /* publications header color */
+}
+
+.pub-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.publication {
+  background-color: #fff;
+  border-left: 4px solid #004080;
+  padding: 20px 25px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.preprints .publication {
+  border-left-color: #ff8c00;
+}
+
+.publication:hover {
+  transform: translateY(-3px);
+}
+
+.publication .authors {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.publication .title {
   font-size: 18px;
-  margin-bottom: 10px;
+  font-variant: small-caps;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
   color: #111;
 }
 
-/* Page titles (like Publications) */
-.page-title,
-.hero h1 {
-  font-variant: small-caps;
-  letter-spacing: 1.2px;
+.publication .journal {
+  font-size: 14px;
+  font-style: italic;
+  color: #333;
+  margin-bottom: 6px;
 }
 
-/* Publication titles slightly refined */
-.publication h3 {
-  font-variant: small-caps;
-  letter-spacing: 0.5px;
+.publication .doi a {
+  font-size: 14px;
+  color: #004080;
+  word-break: break-word;
 }
 
-.nav-links a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0%;
-  height: 1px;
-  background-color: #000;
-  transition: width 0.3s ease;
+.publication .doi a:hover {
+  text-decoration: underline;
 }
 
-.nav-links a:hover::after {
-  width: 100%;
-}
-
-/* ============================= */
-/* CV LINK STYLING */
-/* ============================= */
-
-.cv-link {
-  font-variant: small-caps;
-  letter-spacing: 0.8px;
-}
-
-/* Subtle PDF badge */
-.pdf-icon {
-  font-size: 10px;
-  margin-left: 6px;
-  border: 1px solid #aaa;
-  padding: 1px 4px;
-  border-radius: 3px;
-  letter-spacing: 0.5px;
-  color: #555;
+/* Responsive: stack properly on mobile */
+@media (max-width: 700px) {
+  .pub-list {
+    flex-direction: column;
+  }
 }
