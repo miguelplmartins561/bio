@@ -1,0 +1,200 @@
+body {
+  margin: 0;
+  font-family: "Georgia", "Garamond", "Times New Roman", serif;
+  background-color: #ffffff;
+  color: #222;
+  line-height: 1.7;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 760px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+/* ============================= */
+/* HEADER / NAVIGATION */
+/* ============================= */
+
+.site-header {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 20px 0;
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-title a {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  font-size: 15px;
+  color: #444;
+}
+
+.nav-links a:hover {
+  color: #000;
+}
+.nav-links a[href$=".pdf"] {
+  font-weight: 600;
+}
+
+/* ============================= */
+/* HOMEPAGE */
+/* ============================= */
+
+.hero {
+  margin-top: 60px;
+}
+
+.hero h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #555;
+  margin-top: 0;
+}
+
+/* ============================= */
+/* PUBLICATIONS PAGE */
+/* ============================= */
+
+.page-title {
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.publication {
+  margin-bottom: 35px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.publication:last-child {
+  border-bottom: none;
+}
+
+.publication h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  font-weight: normal;
+}
+
+.pub-meta {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.abstract {
+  font-size: 15px;
+  color: #333;
+}
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+
+footer {
+  margin-top: 100px;
+  padding: 40px 20px;
+  border-top: 1px solid #e5e5e5;
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+}
+
+/* ============================= */
+/* SMALL CAPS ACADEMIC STYLE */
+/* ============================= */
+
+/* Site title in navbar */
+.site-title a {
+  font-variant: small-caps;
+  letter-spacing: 1px;
+}
+
+/* Section headings */
+h2 {
+  font-variant: small-caps;
+  letter-spacing: 0.8px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+/* Page titles (like Publications) */
+.page-title,
+.hero h1 {
+  font-variant: small-caps;
+  letter-spacing: 1.2px;
+}
+
+/* Publication titles slightly refined */
+.publication h3 {
+  font-variant: small-caps;
+  letter-spacing: 0.5px;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 1px;
+  background-color: #000;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ============================= */
+/* CV LINK STYLING */
+/* ============================= */
+
+.cv-link {
+  font-variant: small-caps;
+  letter-spacing: 0.8px;
+}
+
+/* Subtle PDF badge */
+.pdf-icon {
+  font-size: 10px;
+  margin-left: 6px;
+  border: 1px solid #aaa;
+  padding: 1px 4px;
+  border-radius: 3px;
+  letter-spacing: 0.5px;
+  color: #555;
+}
